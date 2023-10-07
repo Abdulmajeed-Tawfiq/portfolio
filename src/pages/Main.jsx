@@ -10,7 +10,7 @@ export default function Main() {
       <Home />
       <About />
       <Projects />
-      <img src="../../public/wave.svg" className="bg-[#f5f5f5]"></img>
+      <img src="../../public/images/wave.svg" className="bg-[#f5f5f5]"></img>
       <Contact />
     </div>
   );
