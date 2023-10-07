@@ -25,17 +25,25 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact p-container" id="contact">
-      <p className="contact-text">CONTACT</p>
-      <p className="text-center text-lg text-[#0fbecc]">
-        Have a question or want to work together?
-      </p>
-      <form ref={form} onSubmit={sendEmail}>
-        <input id="name" type="text" name="from_name" placeholder="Name" />
-        <input id="email" type="email" name="from_email" placeholder="E-mail" />
-        <textarea id="message" name="message" placeholder="Message" />
-        <input type="submit" value="SUBMIT" />
-      </form>
-    </section>
+    <>
+      <img src="../../public/images/wave.svg" className="bg-[#f5f5f5]"></img>
+      <section className="contact p-container" id="contact">
+        <p className="contact-text">CONTACT</p>
+        <p className="text-center text-lg text-[#0fbecc]">
+          Have a question or want to work together?
+        </p>
+        <form ref={form} onSubmit={sendEmail}>
+          <input id="name" type="text" name="from_name" placeholder="Name" />
+          <input
+            id="email"
+            type="email"
+            name="from_email"
+            placeholder="E-mail"
+          />
+          <textarea id="message" name="message" placeholder="Message" />
+          <input type="submit" value="SUBMIT" />
+        </form>
+      </section>
+    </>
   );
 }
