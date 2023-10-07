@@ -201,13 +201,13 @@
   transition: transform 0.3s ease-in-out;
 }
 .project:nth-child(1) {
-  background: url("../../../images/template1.png") center center/cover;
+  background: url("../../public/images/template1.png") center center/cover;
 }
 .project:nth-child(2) {
-  background: url("../../../images/template2.png") center center/cover;
+  background: url("../../public/images/template2.png") center center/cover;
 }
 .project:nth-child(3) {
-  background: url("../../../images/meme.png") center center/cover;
+  background: url("../../public/images/meme.png") center center/cover;
 }
 
 .project .details {
