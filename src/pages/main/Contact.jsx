@@ -26,7 +26,8 @@ export default function Contact() {
 
   return (
     <>
-      <img src="../../public/images/wave.svg" className="bg-[#f5f5f5]"></img>
+      {/* <img src="../../public/images/wave.svg" className="bg-[#f5f5f5]"></img> */}
+
       <section className="contact p-container" id="contact">
         <p className="contact-text">CONTACT</p>
         <p className="text-center text-lg text-[#0fbecc]">
