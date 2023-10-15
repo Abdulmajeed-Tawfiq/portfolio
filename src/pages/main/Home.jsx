@@ -15,13 +15,15 @@ export default function home() {
         </p>
         <p className="mb-8 text-center">I&apos;m a FrontEnd developer</p>
       </div>
-      <a
-        href="#projects"
-        className=" flex justify-center w-fit mx-auto p-4 text-2xl "
-      >
-        <p>View my work</p>
-        <ArrowForward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
-      </a>
+      <div className="z-10">
+        <a
+          href="#projects"
+          className=" flex justify-center w-fit mx-auto p-4 text-2xl "
+        >
+          <p>View my work</p>
+          <ArrowForward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
+        </a>
+      </div>
     </section>
   );
 }
