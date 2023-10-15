@@ -1,4 +1,5 @@
 import { ArrowForward } from "@mui/icons-material";
+import Particlesjs from "./Particles";
 
 export default function home() {
   return (
@@ -6,6 +7,7 @@ export default function home() {
       id="home"
       className="text-white text-5xl bg-[#262634] grid items-center content-center justify-center h-screen "
     >
+      <Particlesjs />
       <div className="">
         <p className="mb-3 text-center">
           Hello, I&apos;m
