@@ -6,6 +6,18 @@ import {
 } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 
+// import html from "../../../public/images/icons/html.svg";
+// import css from "../../../public/images/icons/css.svg";
+// import bootstrap from "../../../public/images/icons/bootstrap.svg";
+// import tailwindcss from "../../../public/images/icons/tailwindcss.svg";
+// import git from "../../../public/images/icons/git.svg";
+// import github from "../../../public/images/icons/github.svg";
+// import react from "../../../public/images/icons/react.svg";
+// import redux from "../../../public/images/icons/redux.svg";
+// import javaScript from "../../../public/images/icons/javaScript.svg";
+// import typeScript from "../../../public/images/icons/typeScript.svg";
+// import mysql from "../../../public/images/icons/mysql.svg";
+
 const About = () => {
   const { ref: ref1, inView: inView1 } = useInView({
     triggerOnce: true,
