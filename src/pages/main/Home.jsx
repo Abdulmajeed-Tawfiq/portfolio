@@ -37,7 +37,7 @@ export default function home() {
         </div>
       </div>
       <div className="avatar">
-        <img src="/images/avatar.png" alt="avatar" />
+        <img src="../../../public/images/avatar.png" alt="avatar" />
       </div>
     </section>
   );

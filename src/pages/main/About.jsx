@@ -93,7 +93,7 @@ const About = () => {
             key={skill.name}
           >
             <img
-              src={`/images/icons/${skill.name}.svg`}
+              src={`../../../public/images/icons/${skill.name}.svg`}
               alt={skill.name}
               className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
             />
