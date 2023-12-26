@@ -6,17 +6,18 @@ import {
 } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 
-// import html from "../../../public/images/icons/html.svg";
-// import css from "../../../public/images/icons/css.svg";
-// import bootstrap from "../../../public/images/icons/bootstrap.svg";
-// import tailwindcss from "../../../public/images/icons/tailwindcss.svg";
-// import git from "../../../public/images/icons/git.svg";
-// import github from "../../../public/images/icons/github.svg";
-// import react from "../../../public/images/icons/react.svg";
-// import redux from "../../../public/images/icons/redux.svg";
-// import javaScript from "../../../public/images/icons/javaScript.svg";
-// import typeScript from "../../../public/images/icons/typeScript.svg";
-// import mysql from "../../../public/images/icons/mysql.svg";
+import html from "../../../public/images/icons/html.svg";
+import css from "../../../public/images/icons/css.svg";
+import bootstrap from "../../../public/images/icons/bootstrap.svg";
+import tailwindcss from "../../../public/images/icons/tailwindcss.svg";
+import git from "../../../public/images/icons/git.svg";
+import github from "../../../public/images/icons/github.svg";
+import react from "../../../public/images/icons/react.svg";
+import redux from "../../../public/images/icons/redux.svg";
+import nextjs from "../../../public/images/icons/redux.svg";
+import javaScript from "../../../public/images/icons/javaScript.svg";
+import typeScript from "../../../public/images/icons/typeScript.svg";
+import mysql from "../../../public/images/icons/mysql.svg";
 
 const About = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -34,18 +35,18 @@ const About = () => {
   });
 
   const skills = [
-    { name: "html", ratio: 90 },
-    { name: "css", ratio: 90 },
-    { name: "tailwindcss", ratio: 80 },
-    { name: "bootstrap", ratio: 70 },
-    { name: "javaScript", ratio: 80 },
-    { name: "typeScript", ratio: 70 },
-    { name: "react", ratio: 80 },
-    { name: "redux", ratio: 70 },
-    { name: "nextjs", ratio: 60 },
-    { name: "git", ratio: 70 },
-    { name: "github", ratio: 70 },
-    { name: "mysql", ratio: 60 },
+    { name: "html", ratio: 90, image: html },
+    { name: "css", ratio: 90, image: css },
+    { name: "tailwindcss", ratio: 80, image: tailwindcss },
+    { name: "bootstrap", ratio: 70, image: bootstrap },
+    { name: "javaScript", ratio: 80, image: javaScript },
+    { name: "typeScript", ratio: 70, image: typeScript },
+    { name: "react", ratio: 80, image: react },
+    { name: "redux", ratio: 70, image: redux },
+    { name: "nextjs", ratio: 60, image: nextjs },
+    { name: "git", ratio: 70, image: git },
+    { name: "github", ratio: 70, image: github },
+    { name: "mysql", ratio: 60, image: mysql },
   ];
   return (
     <section id="about" className="p-container">
@@ -105,7 +106,7 @@ const About = () => {
             key={skill.name}
           >
             <img
-              src={`../../../public/images/icons/${skill.name}.svg`}
+              src={skill.image}
               alt={skill.name}
               className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
             />
