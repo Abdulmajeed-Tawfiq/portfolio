@@ -1,28 +1,43 @@
-import { ArrowForward } from "@mui/icons-material";
+import { ArrowDownward, ArrowForward } from "@mui/icons-material";
 import Particlesjs from "./Particles";
 
 export default function home() {
   return (
     <section
       id="home"
-      className="text-white text-5xl bg-[#262634] grid items-center content-center justify-center h-screen "
+      className="text-white bg-[#262634] grid items-center content-center justify-center h-screen "
     >
       <Particlesjs />
-      <div className="">
-        <p className="mb-3 text-center">
-          Hello, I&apos;m
-          <span className="text-[#e11b6c]"> Abdulmajeed Tawfik</span>
+      <div>
+        <p className="mb-3 text-center text-5xl text-[#e11b6c]">
+          Abdulmajeed Tawfik
         </p>
-        <p className="mb-8 text-center">I&apos;m a FrontEnd developer</p>
+        <p className="mb-8 text-center text-4xl"> Front-End developer</p>
       </div>
-      <div className="z-10">
-        <a
-          href="#projects"
-          className=" flex justify-center w-fit mx-auto p-4 text-2xl "
-        >
-          <p>View my work</p>
-          <ArrowForward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
-        </a>
+      <div className="buttons">
+        <div className="z-10 w-fit">
+          <a
+            href="https://drive.google.com/file/d/1VP7LGQxQSqsezAORAcaXCuM-a-I8MRft/view?usp=sharing"
+            rel="noreferrer"
+            target="_blank"
+            className=" flex justify-center w-fit mx-auto p-4 text-2xl "
+          >
+            <p>Check My CV</p>
+            <ArrowForward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
+          </a>
+        </div>
+        <div className="z-10 w-fit">
+          <a
+            href="#projects"
+            className=" flex justify-center w-fit mx-auto p-4 text-2xl "
+          >
+            <p>View My Work</p>
+            <ArrowDownward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
+          </a>
+        </div>
+      </div>
+      <div className="avatar">
+        <img src="/public/images/avatar.png" alt="" />
       </div>
     </section>
   );

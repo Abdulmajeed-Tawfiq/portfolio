@@ -8,6 +8,7 @@ export default function Particlesjs() {
     script.async = true;
     script.onload = () => {
       // Configure Particle.js after the script has loaded
+      // eslint-disable-next-line no-undef
       particlesJS("particles-container", {
         particles: {
           number: {
@@ -42,6 +43,7 @@ export default function Particlesjs() {
   return (
     <div
       id="particles-container"
+      className="z-[2]"
       style={{ position: "absolute", width: "100%", height: "100%" }}
     ></div>
   );

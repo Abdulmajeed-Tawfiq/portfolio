@@ -8,13 +8,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#161b26] border-b-2 border-[#00bcc1] fixed top-0 left-0 w-full text-white text-lg z-10 min-h-[53px]">
+    <nav className="bg-[#161b26e7] border-b-2 border-[#00bcc1] fixed top-0 left-0 w-full text-white text-lg z-30 flex justify-center">
       <i
         onClick={toggleOpen}
         className={`fa-solid fa-bars absolute right-7 top-2.5 text-2xl cursor-pointer sm:hidden hover:text-[#00b8bd]`}
       ></i>
       <ul className="hidden sm:flex justify-start">
-        <li className="py-3 px-6 ">
+        <li className="py-2 px-6 ">
           <a
             href="#home"
             className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -22,7 +22,7 @@ export default function Navbar() {
             HOME
           </a>
         </li>
-        <li className="py-3 px-6 ">
+        <li className="py-2 px-6 ">
           <a
             href="#about"
             className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -30,7 +30,7 @@ export default function Navbar() {
             ABOUT
           </a>
         </li>
-        <li className="py-3 px-6 ">
+        <li className="py-2 px-6 ">
           <a
             href="#projects"
             className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -38,7 +38,7 @@ export default function Navbar() {
             PROJECTS
           </a>
         </li>
-        <li className="py-3 px-6 ">
+        <li className="py-2 px-6 ">
           <a
             href="#contact"
             className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -49,8 +49,8 @@ export default function Navbar() {
       </ul>
 
       {isOpen ? (
-        <ul className="grid justify-start mt-10  transition-transform transform duration-1000">
-          <li className="py-3 px-6" onClick={toggleOpen}>
+        <ul className="grid justify-start mt-10 transition-transform transform duration-1000">
+          <li className="py-2 px-6" onClick={toggleOpen}>
             <a
               href="#home"
               className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -58,7 +58,7 @@ export default function Navbar() {
               HOME
             </a>
           </li>
-          <li className="py-3 px-6" onClick={toggleOpen}>
+          <li className="py-2 px-6" onClick={toggleOpen}>
             <a
               href="#about"
               className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -66,7 +66,7 @@ export default function Navbar() {
               ABOUT
             </a>
           </li>
-          <li className="py-3 px-6" onClick={toggleOpen}>
+          <li className="py-2 px-6" onClick={toggleOpen}>
             <a
               href="#projects"
               className="hover:text-[#e11b6c] transition-all duration-[400ms]"
@@ -74,7 +74,7 @@ export default function Navbar() {
               PROJECTS
             </a>
           </li>
-          <li className="py-3 px-6" onClick={toggleOpen}>
+          <li className="py-2 px-6" onClick={toggleOpen}>
             <a
               href="#contact"
               className="hover:text-[#e11b6c] transition-all duration-[400ms]"

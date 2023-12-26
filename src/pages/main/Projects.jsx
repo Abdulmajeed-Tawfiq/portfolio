@@ -1,10 +1,19 @@
+import { useInView } from "react-intersection-observer";
+
 export default function Projects() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // This will trigger as soon as 10% of the element is visible
+  });
+
   return (
     <section id="projects">
       <p className="projects-text">PROJECTS</p>
-
-      <div className="projects p-container">
-        <div className="project">
+      <div
+        ref={ref}
+        className={`animateb ${inView ? "show" : ""} projects p-container`}
+      >
+        <div className={` project`}>
           <div className="details">
             <h2>Leon</h2>
             <p className="used-tech">HTML & CSS</p>
