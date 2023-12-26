@@ -14,7 +14,7 @@ import git from "../../../public/images/icons/git.svg";
 import github from "../../../public/images/icons/github.svg";
 import react from "../../../public/images/icons/react.svg";
 import redux from "../../../public/images/icons/redux.svg";
-import nextjs from "../../../public/images/icons/redux.svg";
+import nextjs from "../../../public/images/icons/nextjs.svg";
 import javaScript from "../../../public/images/icons/javaScript.svg";
 import typeScript from "../../../public/images/icons/typeScript.svg";
 import mysql from "../../../public/images/icons/mysql.svg";
