@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="footer">
-      <a href="#home" className="relative">
+    <footer className="footer absolute">
+      <a href="#home" className="relative top-[-70px]">
         <i className="fa-solid fa-angles-up back-top"></i>
       </a>
       <div className="social">
