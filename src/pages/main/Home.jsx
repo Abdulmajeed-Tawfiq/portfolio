@@ -1,6 +1,5 @@
 import { ArrowDownward, ArrowForward } from "@mui/icons-material";
 import Particlesjs from "./Particles";
-import avatar from "../../../public/images/avatar.png";
 
 export default function home() {
   return (
@@ -36,9 +35,6 @@ export default function home() {
             <ArrowDownward className=" arrow-icon text-white ml-2 mb-1 self-end text-xl" />
           </a>
         </div>
-      </div>
-      <div className="avatar">
-        <img src={avatar} alt="avatar" />
       </div>
     </section>
   );

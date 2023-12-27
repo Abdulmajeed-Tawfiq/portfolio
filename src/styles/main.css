@@ -116,15 +116,6 @@
     background-color: #00b8bd;
   }
 }
-#home .avatar {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#home .avatar > img {
-  position: relative;
-}
 
 @keyframes cvArrow {
   from {
