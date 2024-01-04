@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
@@ -6,6 +7,31 @@ export default function Projects() {
     threshold: 0.1, // This will trigger as soon as 10% of the element is visible
   });
 
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/Abdulmajeed-Tawfiq/repos")
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredData = data.filter((repo) => repo.homepage !== null);
+        setProjects(filteredData);
+      });
+  }, []);
+
+  console.log(projects);
+
+  // useEffect(() => {
+  //   fetch("https://api.github.com/users/Abdulmajeed-Tawfiq/repos")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const filteredData = data.filter((repo) => repo.homepage !== null);
+  //       setProjects(filteredData);
+  // const a = data.description.split("(screenshot):")[1];
+  // setProjects(a);
+  // console.log(a);
+  //     });
+  // }, []);
+
   return (
     <section id="projects">
       <p className="projects-text">PROJECTS</p>
@@ -13,41 +39,36 @@ export default function Projects() {
         ref={ref}
         className={`animateb ${inView ? "show" : ""} projects p-container`}
       >
-        <div className={` project`}>
-          <div className="details">
-            <h2>Leon</h2>
-            <p className="used-tech">HTML & CSS</p>
-            <a
-              href="https://abdulmajeed-tawfiq.github.io/html-css_-templet_1"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Learn more
-            </a>
+        {projects.map((project, index) => (
+          <div key={index} className={`project flip-card`}>
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                {/* front content */}
+                <img
+                  src={project.description.split("(screenshot):")[1]}
+                  alt="aaa"
+                ></img>
+              </div>
+              <div className="flip-card-back">
+                {/* back content */}
+                <h2>{project.name}</h2>
+                <ul className="techs">
+                  {project.topics.map((topic, index) => (
+                    <li key={index}>{topic}</li>
+                  ))}
+                </ul>
+                <div className="buttons">
+                  <a href={project.html_url} rel="noreferrer" target="_blank">
+                    <li className="fab fa-github fa-lg"></li> code
+                  </a>
+                  <a href={project.homepage} rel="noreferrer" target="_blank">
+                    visit
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="project">
-          <div className="details">
-            <h2>Kasper</h2>
-            <p className="used-tech">HTML & CSS</p>
-            <a
-              href="https://abdulmajeed-tawfiq.github.io/html-css_-templet_2"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Learn more
-            </a>
-          </div>
-        </div>
-        <div className="project">
-          <div className="details">
-            <h2>Meme generator</h2>
-            <p className="used-tech">React JS</p>
-            <a href="https://abdulmajeed-tawfiq.github.io/Meme-generator/">
-              Learn more
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
