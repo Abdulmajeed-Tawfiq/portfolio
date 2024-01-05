@@ -45,11 +45,12 @@ export default function Projects() {
                 </ul>
                 <div className="buttons">
                   <a href={project.html_url} rel="noreferrer" target="_blank">
-                    <li className="fab fa-github fa-lg mr-2"></li> code
+                    <li className="fab fa-github fa-lg mr-2"></li>{" "}
+                    <div>code</div>
                   </a>
                   <a href={project.homepage} rel="noreferrer" target="_blank">
                     <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i>
-                    visit
+                    <div>visit</div>
                   </a>
                 </div>
               </div>
