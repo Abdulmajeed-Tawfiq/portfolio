@@ -18,20 +18,6 @@ export default function Projects() {
       });
   }, []);
 
-  console.log(projects);
-
-  // useEffect(() => {
-  //   fetch("https://api.github.com/users/Abdulmajeed-Tawfiq/repos")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       const filteredData = data.filter((repo) => repo.homepage !== null);
-  //       setProjects(filteredData);
-  // const a = data.description.split("(screenshot):")[1];
-  // setProjects(a);
-  // console.log(a);
-  //     });
-  // }, []);
-
   return (
     <section id="projects">
       <p className="projects-text">PROJECTS</p>
@@ -59,9 +45,10 @@ export default function Projects() {
                 </ul>
                 <div className="buttons">
                   <a href={project.html_url} rel="noreferrer" target="_blank">
-                    <li className="fab fa-github fa-lg"></li> code
+                    <li className="fab fa-github fa-lg mr-2"></li> code
                   </a>
                   <a href={project.homepage} rel="noreferrer" target="_blank">
+                    <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i>
                     visit
                   </a>
                 </div>
