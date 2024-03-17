@@ -46,14 +46,26 @@ export default function Contact() {
         </p>
         <form ref={form} onSubmit={sendEmail}>
           <div ref={ref} className={`animater ${inView ? "show" : ""} `}>
-            <input id="name" type="text" name="from_name" placeholder="Name" />
+            <input
+              id="name"
+              type="text"
+              name="from_name"
+              placeholder="Name"
+              required
+            />
             <input
               id="email"
               type="email"
               name="from_email"
               placeholder="E-mail"
+              required
             />
-            <textarea id="message" name="message" placeholder="Message" />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            />
             <input type="submit" value="SUBMIT" className="cursor-pointer" />
           </div>
         </form>

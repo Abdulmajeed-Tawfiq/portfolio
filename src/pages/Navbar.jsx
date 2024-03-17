@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#161b26e7] border-b-2 border-[#00bcc1] fixed top-0 left-0 w-full text-white text-lg z-30 flex justify-center">
+    <nav className="bg-[#161b2686] backdrop-blur border-b-2 border-[#00bcc1] fixed top-0 left-0 w-full text-white text-lg z-30 flex justify-center">
       <i
         onClick={toggleOpen}
         className={`fa-solid fa-bars absolute right-7 top-2.5 text-2xl cursor-pointer sm:hidden hover:text-[#00b8bd]`}
