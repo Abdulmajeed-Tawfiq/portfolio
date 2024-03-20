@@ -6,15 +6,15 @@ import {
 } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 
-import html from "../../../public/images/icons/html.svg";
-import css from "../../../public/images/icons/css.svg";
+import html from "../../../public/images/icons/html5.svg";
+import css from "../../../public/images/icons/css-3.svg";
 import bootstrap from "../../../public/images/icons/bootstrap.svg";
 import tailwindcss from "../../../public/images/icons/tailwindcss.svg";
 import git from "../../../public/images/icons/git.svg";
 import github from "../../../public/images/icons/github.svg";
 import react from "../../../public/images/icons/react.svg";
 import redux from "../../../public/images/icons/redux.svg";
-import nextjs from "../../../public/images/icons/nextjs.svg";
+import nextjs from "../../../public/images/icons/next-js.svg";
 import javaScript from "../../../public/images/icons/javaScript.svg";
 import typeScript from "../../../public/images/icons/typeScript.svg";
 import mysql from "../../../public/images/icons/mysql.svg";
@@ -35,18 +35,18 @@ const About = () => {
   });
 
   const skills = [
-    { name: "html", ratio: 90, image: html },
-    { name: "css", ratio: 90, image: css },
-    { name: "tailwindcss", ratio: 80, image: tailwindcss },
-    { name: "bootstrap", ratio: 70, image: bootstrap },
-    { name: "javaScript", ratio: 80, image: javaScript },
-    { name: "typeScript", ratio: 70, image: typeScript },
-    { name: "react", ratio: 80, image: react },
-    { name: "redux", ratio: 70, image: redux },
-    { name: "nextjs", ratio: 60, image: nextjs },
-    { name: "git", ratio: 70, image: git },
-    { name: "github", ratio: 70, image: github },
-    { name: "mysql", ratio: 60, image: mysql },
+    { name: "html", image: html },
+    { name: "css", image: css },
+    { name: "tailwindcss", image: tailwindcss },
+    { name: "bootstrap", image: bootstrap },
+    { name: "javaScript", image: javaScript },
+    { name: "typeScript", image: typeScript },
+    { name: "react", image: react },
+    { name: "redux", image: redux },
+    { name: "nextjs", image: nextjs },
+    { name: "git", image: git },
+    { name: "github", image: github },
+    { name: "mysql", image: mysql },
   ];
   return (
     <section id="about" className="p-container">
@@ -94,20 +94,22 @@ const About = () => {
 
       <h2
         ref={ref3}
-        className={`animatet ${inView3 ? "show" : ""} text-center text-[38px]`}
+        className={`animatet ${
+          inView3 ? "show" : ""
+        } text-center text-[38px] mb-12`}
       >
         Skills
       </h2>
       <div
-        className={`skills tn:grid-cols-2 grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 justify-items-center	`}
+        className={`skills tn:grid-cols-2 grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 justify-items-center gap-4`}
       >
         {skills.map((skill) => (
           <div
             ref={ref3}
             className={`
               animatet ${inView3 ? "show" : ""}
-              grid w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40
-              skill`}
+              m-0 grid justify-center items-center w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40
+              skill transform hover:scale-110 hover:shadow-lg hover:bg-slate-50 transition-transform duration-300 `}
             key={skill.name}
           >
             <img
@@ -115,7 +117,7 @@ const About = () => {
               alt={skill.name}
               className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
             />
-            <p>{skill.name}</p>
+            <p className="m-auto">{skill.name}</p>
           </div>
         ))}
       </div>
