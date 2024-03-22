@@ -101,11 +101,13 @@ const About = () => {
         Skills
       </h2>
       <div
-        className={`skills tn:grid-cols-2 grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 justify-items-center gap-4`}
+        className={` animatet ${
+          inView3 ? "show" : ""
+        } skills tn:grid-cols-2 grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 justify-items-center gap-4`}
+        ref={ref3}
       >
         {skills.map((skill) => (
           <div
-            ref={ref3}
             className={`
               animatet ${inView3 ? "show" : ""}
               m-0 grid justify-center items-center w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40
