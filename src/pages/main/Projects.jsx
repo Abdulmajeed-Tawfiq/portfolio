@@ -57,7 +57,7 @@ export default function Projects() {
                       className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                     >
                       <img
-                        src="../../../public/images/icons/github.svg"
+                        src="/images/icons/github.svg"
                         alt="source code"
                         className="w-full h-full object-contain hover:scale-150"
                       />
@@ -67,7 +67,7 @@ export default function Projects() {
                       className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                     >
                       <img
-                        src="../../../public/images/icons/link.svg"
+                        src="/images/icons/link.svg"
                         alt="source code"
                         className="w-full h-full object-contain hover:scale-150"
                       />
