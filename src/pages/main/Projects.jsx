@@ -3,6 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
+import github from "/images/icons/github.svg";
+import link from "/images/icons/link.svg";
 
 export default function Projects() {
   const { ref, inView } = useInView({
@@ -57,7 +59,7 @@ export default function Projects() {
                       className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                     >
                       <img
-                        src="/images/icons/github.svg"
+                        src={github}
                         alt="source code"
                         className="w-full h-full object-contain hover:scale-150"
                       />
@@ -67,7 +69,7 @@ export default function Projects() {
                       className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                     >
                       <img
-                        src="/images/icons/link.svg"
+                        src={link}
                         alt="source code"
                         className="w-full h-full object-contain hover:scale-150"
                       />

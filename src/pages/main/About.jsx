@@ -6,18 +6,18 @@ import {
 } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 
-import html from "../../../public/images/icons/html5.svg";
-import css from "../../../public/images/icons/css-3.svg";
-import bootstrap from "../../../public/images/icons/bootstrap.svg";
-import tailwindcss from "../../../public/images/icons/tailwindcss.svg";
-import git from "../../../public/images/icons/git.svg";
-import github from "../../../public/images/icons/github.svg";
-import react from "../../../public/images/icons/react.svg";
-import redux from "../../../public/images/icons/redux.svg";
-import nextjs from "../../../public/images/icons/next-js.svg";
-import javaScript from "../../../public/images/icons/javaScript.svg";
-import typeScript from "../../../public/images/icons/typeScript.svg";
-import mysql from "../../../public/images/icons/mysql.svg";
+import html from "/images/icons/html5.svg";
+import css from "/images/icons/css-3.svg";
+import bootstrap from "/images/icons/bootstrap.svg";
+import tailwindcss from "/images/icons/tailwindcss.svg";
+import git from "/images/icons/git.svg";
+import github from "/images/icons/github.svg";
+import react from "/images/icons/react.svg";
+import redux from "/images/icons/redux.svg";
+import nextjs from "/images/icons/next-js.svg";
+import javaScript from "/images/icons/javaScript.svg";
+import typeScript from "/images/icons/typeScript.svg";
+import mysql from "/images/icons/mysql.svg";
 
 const About = () => {
   const { ref: ref1, inView: inView1 } = useInView({
