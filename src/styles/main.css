@@ -1,6 +1,5 @@
 * {
   transition: all;
-  /* transition-duration: 500ms; */
   scroll-behavior: smooth;
 }
 
@@ -236,13 +235,8 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 30px;
   justify-content: center;
-}
-.project {
-  position: relative;
-  height: 250px;
-  /* transition: transform 0.3s ease-in-out; */
 }
 
 @media (width < 1200px) {
