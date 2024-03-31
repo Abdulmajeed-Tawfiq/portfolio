@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <p className="mb-8 text-center text-4xl"> Front-End developer</p>
       </div>
-      <div className={` animater ${inView ? "show" : ""} buttons`}>
+      <div className={` animater ${inView ? "show" : ""} buttons z-10`}>
         <div className="z-10 w-fit">
           <a
             href="https://drive.google.com/file/d/1VP7LGQxQSqsezAORAcaXCuM-a-I8MRft/view?usp=sharing"
