@@ -22,14 +22,14 @@ export default function Contact() {
         form.current,
         "sOABhQNatpNqJDc_Y"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      // .then(
+      //   (result) => {
+          // console.log(result.text);
+      //   },
+      //   (error) => {
+          // console.log(error.text);
+      //   }
+      // );
     toast.success("Thanks for your message", {
       position: "top-center",
       autoClose: 4000,

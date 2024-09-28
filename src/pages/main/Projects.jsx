@@ -23,8 +23,6 @@ export default function Projects() {
       });
   }, []);
 
-  console.log(projects);
-
   return (
     <section id="projects">
       <p className="projects-text">PROJECTS</p>

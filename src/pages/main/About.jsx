@@ -8,12 +8,12 @@ import { useInView } from "react-intersection-observer";
 
 import html from "/images/icons/html5.svg";
 import css from "/images/icons/css-3.svg";
+import sass from "/images/icons/sass.svg";
 import bootstrap from "/images/icons/bootstrap.svg";
 import tailwindcss from "/images/icons/tailwindcss.svg";
 import git from "/images/icons/git.svg";
-import github from "/images/icons/github.svg";
+import wordpress from "/images/icons/wordpress.svg";
 import react from "/images/icons/react.svg";
-import redux from "/images/icons/redux.svg";
 import nextjs from "/images/icons/next-js.svg";
 import javaScript from "/images/icons/javaScript.svg";
 import typeScript from "/images/icons/typeScript.svg";
@@ -37,16 +37,16 @@ const About = () => {
   const skills = [
     { name: "html", image: html },
     { name: "css", image: css },
+    { name: "sass", image: sass },
     { name: "tailwindcss", image: tailwindcss },
     { name: "bootstrap", image: bootstrap },
     { name: "javaScript", image: javaScript },
     { name: "typeScript", image: typeScript },
     { name: "react", image: react },
-    { name: "redux", image: redux },
     { name: "nextjs", image: nextjs },
     { name: "git", image: git },
-    { name: "github", image: github },
     { name: "mysql", image: mysql },
+    { name: "wordpress", image: wordpress }
   ];
   return (
     <section id="about" className="p-container">
@@ -111,13 +111,13 @@ const About = () => {
             className={`
               animatet ${inView3 ? "show" : ""}
               m-0 grid justify-center items-center w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40
-              skill transform hover:scale-110 hover:shadow-lg hover:bg-slate-50 transition-transform duration-300 `}
+              skill transform hover:scale-110 hover:shadow-lg hover:bg-slate-100 rounded-3xl transition-transform duration-500 `}
             key={skill.name}
           >
             <img
               src={skill.image}
               alt={skill.name}
-              className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
+              className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 m-auto"
             />
             <p className="m-auto">{skill.name}</p>
           </div>
