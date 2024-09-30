@@ -47,8 +47,10 @@ export default function Home() {
           </div>
         </div>
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           className="floating-image z-10 w-[50%] opacity-90 max-nlg:h-[300px] max-md:w-full"
+          alt="hero_image"
+          loading="lazy"
         />
       </div>
     </section>
