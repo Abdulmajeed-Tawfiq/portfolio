@@ -116,7 +116,7 @@
   border: #e11b6c 2px solid;
 
   .arrow-icon {
-    animation: cvArrow 0.7s infinite;
+    animation: cvArrow 1s infinite;
   }
 
   &:hover {
@@ -130,7 +130,7 @@
   border: #00b8bd 2px solid;
 
   .arrow-icon {
-    animation: projectArrow 0.7s infinite;
+    animation: projectArrow 1s infinite;
   }
 
   &:hover {
@@ -391,4 +391,22 @@ footer {
   transform: scale(1.2);
   transition: all;
   transition-duration: 500ms;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(60px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(60px);
+  }
+}
+
+.floating-image {
+  animation: float 8s ease-in-out infinite;
 }
