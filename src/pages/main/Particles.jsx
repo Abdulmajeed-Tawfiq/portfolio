@@ -12,7 +12,7 @@ export default function Particlesjs() {
       particlesJS("particles-container", {
         particles: {
           number: {
-            value: 40,
+            value: 30,
           },
           color: {
             value: ["#00c7cc", "#f20063"],

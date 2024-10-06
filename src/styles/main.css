@@ -188,55 +188,19 @@
   margin: 70px 20px;
   display: grid;
   gap: 50px;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
 }
 
-@media screen and (width < 1050px) {
-  #about .features {
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-@media screen and (width < 600px) {
+@media screen and (width < 900px) {
   #about .features {
     grid-template-columns: repeat(1, auto);
   }
-}
-
-#about .features .feature :first-child {
-  background-color: #00bec0;
-  border-radius: 10%;
-  width: 96px;
-  height: 96px;
-  padding-block: 15px;
-  display: flex;
-  margin: auto;
-}
-
-#about .features .feature h2 {
-  font-size: 36px;
-  margin: 5px 0 10px;
-  text-align: center;
-}
-
-#about .features .feature p {
-  text-align: center;
-  font-size: 20px;
 }
 
 .features-2 .text {
   text-align: center;
   font-size: large;
   margin-bottom: 30px;
-}
-
-.features-2 .text .who-is {
-  padding-bottom: 6px;
-  font-size: xx-large;
-}
-
-.features-2 .text a {
-  color: #5bb7ff;
 }
 
 /* Projects section */

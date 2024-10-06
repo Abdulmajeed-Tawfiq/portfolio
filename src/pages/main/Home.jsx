@@ -1,6 +1,7 @@
 import { ArrowDownward, ArrowForward } from "@mui/icons-material";
 import Particlesjs from "./Particles";
 import { useInView } from "react-intersection-observer";
+import heroImg from "/images/hero.webp";
 
 export default function Home() {
   const { ref, inView } = useInView({
@@ -21,14 +22,14 @@ export default function Home() {
             <p className="mb-3 text-center text-4xl text-[#e11b6c]">
               Abdulmajeed Tawfik
             </p>
-            <p className="mb-8 text-center text-3xl"> Front-End developer</p>
+            <p className="mb-8 text-center text-3xl">Front-End developer</p>
           </div>
           <div className={` animater ${inView ? "show" : ""} buttons z-10`}>
             <a
               href="https://drive.google.com/file/d/1VP7LGQxQSqsezAORAcaXCuM-a-I8MRft/view?usp=sharing"
               rel="noreferrer"
               target="_blank"
-              className="z-10 w-fit bg-[#e11b6c] rounded-[20px] p-4 mx-auto shadow-xl shadow-slate-900 hover:scale-105"
+              className="z-10 w-fit bg-[#e11b6c] rounded-[20px] p-4 mx-auto shadow-xl shadow-slate-900 transition-transform duration-500   hover:scale-105"
             >
               <div className=" flex justify-center text-xl">
                 <p>Check My CV</p>
@@ -37,7 +38,7 @@ export default function Home() {
             </a>
             <a
               href="#projects"
-              className="z-10 w-fit bg-[#00b8bd] rounded-[20px] p-4 mx-auto shadow-xl shadow-slate-900 hover:scale-105"
+              className="z-10 w-fit bg-[#00b8bd] rounded-[20px] p-4 mx-auto shadow-xl shadow-slate-900 transition-transform duration-500   hover:scale-105"
             >
               <div className=" flex justify-center text-xl ">
                 <p>View My Work</p>
@@ -47,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <img
-          src="/images/hero.webp"
+          src={heroImg}
           className="floating-image z-10 w-[50%] opacity-90 max-nlg:h-[300px] max-md:w-full"
           alt="hero_image"
           loading="lazy"
