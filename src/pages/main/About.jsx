@@ -1,21 +1,21 @@
 import { useInView } from "react-intersection-observer";
 
-import html from "/images/icons/html.png";
-import css from "/images/icons/css.png";
-import sass from "/images/icons/sass.png";
-import bootstrap from "/images/icons/bootstrap.png";
-import tailwindcss from "/images/icons/tailwind.png";
-import git from "/images/icons/git.png";
-import wordpress from "/images/icons/wordpress.png";
-import react from "/images/icons/react.png";
-import nextjs from "/images/icons/nextjs2.png";
-import javaScript from "/images/icons/javascript.png";
-import typeScript from "/images/icons/typescript.png";
-import mysql from "/images/icons/mysql.png";
-import rocket from "/images/icons/rocket.png";
-import bulb from "/images/icons/bulb.png";
-import fire from "/images/icons/fire.png";
-import thumbUp from "/images/icons/thumbUp.png";
+import html from "/images/icons/html.webp";
+import css from "/images/icons/css.webp";
+import sass from "/images/icons/sass.webp";
+import bootstrap from "/images/icons/bootstrap.webp";
+import tailwindcss from "/images/icons/tailwind.webp";
+import git from "/images/icons/git.webp";
+import wordpress from "/images/icons/wordpress.webp";
+import react from "/images/icons/react.webp";
+import nextjs from "/images/icons/nextjs2.webp";
+import javaScript from "/images/icons/javascript.webp";
+import typeScript from "/images/icons/typescript.webp";
+import mysql from "/images/icons/mysql.webp";
+import rocket from "/images/icons/rocket.webp";
+import bulb from "/images/icons/bulb.webp";
+import fire from "/images/icons/fire.webp";
+import thumbUp from "/images/icons/thumbUp.webp";
 
 const About = () => {
   const { ref: ref1, inView: inView1 } = useInView({
