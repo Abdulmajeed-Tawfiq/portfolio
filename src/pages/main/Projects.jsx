@@ -5,6 +5,7 @@ import { fadeIn } from "../../utils/motion";
 import { projectsData } from "../../utils/projectsData";
 import github from "/images/icons/github.svg";
 import link from "/images/icons/link.svg";
+import { Image } from "antd";
 
 export default function Projects() {
   const { ref, inView } = useInView({
@@ -29,18 +30,29 @@ export default function Projects() {
               options={{
                 max: 45,
                 scale: 1,
-                speed: 450,
+                speed: 1000,
               }}
               className="xs:w-[250px] bg-[#1c1f2f] rounded-2xl min-h-[500px]"
             >
               <div className="  w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
                 <div className="relative w-full h ">
-                  <img
-                    src={project.image}
-                    alt="project-image"
-                    className="w-full h-[230px] object-cover rounded-2xl"
-                  />
-                  <div className="absolute inset-0 flex justify-between m-2 card-img_hover">
+                  <Image.PreviewGroup
+                    preview={{
+                      toolbarRender: () => null,
+                      countRender: () => null,
+                    }}
+                  >
+                    {project.image.map((img, index) => (
+                      <Image
+                        key={index}
+                        src={img}
+                        alt={`project-image-${index + 1}`}
+                        className="w-full object-cover rounded-2xl"
+                        style={{ display: index === 0 ? "block" : "none" }}
+                      />
+                    ))}
+                  </Image.PreviewGroup>
+                  <div className="absolute inset-0 flex justify-between m-2 h-0">
                     <div
                       onClick={() => window.open(project.github, "_blank")}
                       className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"

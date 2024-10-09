@@ -234,6 +234,17 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-content: center;
+
+  /* .project-image { */
+  img {
+    height: 230px !important;
+  }
+
+  .ant-image-mask {
+    border-radius: 16px;
+  }
+
+  /* } */
 }
 
 @media (width < 1200px) {
