@@ -1,29 +1,65 @@
+import { Image } from "antd";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Tilt } from "react-tilt";
 import { fadeIn } from "../../utils/motion";
 import { projectsData } from "../../utils/projectsData";
 import github from "/images/icons/github.svg";
 import link from "/images/icons/link.svg";
-import { Image } from "antd";
 
 export default function Projects() {
+  const [filter, setFilter] = useState("All");
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1, // This will trigger as soon as 10% of the element is visible
   });
 
+  const filters = ["All", "The Best", "CSS", "React", "nextjs"];
+
+  const filteredProjects = projectsData.filter((project) => {
+    if (filter === "All") return true;
+    if (filter === "The Best") return project.isBest;
+    return project.mainTech === filter;
+  });
+
   return (
     <section id="projects">
       <p className="projects-text">PROJECTS</p>
+      <motion.div
+        className="flex flex-wrap justify-center gap-4 mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {filters.map((f) => (
+          <motion.button
+            key={f}
+            onClick={() => setFilter(f)}
+            className={`px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded ${
+              filter === f
+                ? "bg-[#00c5c3] text-white"
+                : "bg-[#1c1f2f] text-gray-300 hover:bg-[#2a2f47]"
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {f}
+          </motion.button>
+        ))}
+      </motion.div>
       <div
         ref={ref}
         className={`animateb ${inView ? "show" : ""} projects p-container`}
       >
-        {projectsData.map((project) => (
+        {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
             variants={fadeIn("up", "spring", project.id * 0.5, 0.75)}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
             className="relative"
           >
             <Tilt
@@ -34,8 +70,8 @@ export default function Projects() {
               }}
               className="xs:w-[250px] bg-[#1c1f2f] rounded-2xl min-h-[500px]"
             >
-              <div className="  w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-                <div className="relative w-full h ">
+              <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                <div className="relative w-full">
                   <Image.PreviewGroup
                     preview={{
                       toolbarRender: () => null,
@@ -48,31 +84,38 @@ export default function Projects() {
                         src={img}
                         alt={`project-image-${index + 1}`}
                         className="w-full object-cover rounded-2xl"
-                        style={{ display: index === 0 ? "block" : "none" }}
+                        style={{
+                          display: index === 0 ? "block" : "none",
+                          height: 230,
+                        }}
                       />
                     ))}
                   </Image.PreviewGroup>
                   <div className="absolute inset-0 flex justify-between m-2 h-0">
-                    <div
-                      onClick={() => window.open(project.github, "_blank")}
-                      className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
-                    >
-                      <img
-                        src={github}
-                        alt="source code"
-                        className="w-full h-full object-contain hover:scale-150"
-                      />
-                    </div>
-                    <div
-                      onClick={() => window.open(project.link, "_blank")}
-                      className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
-                    >
-                      <img
-                        src={link}
-                        alt="source code"
-                        className="w-full h-full object-contain hover:scale-150"
-                      />
-                    </div>
+                    {project.github && (
+                      <div
+                        onClick={() => window.open(project.github, "_blank")}
+                        className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <img
+                          src={github}
+                          alt="source code"
+                          className="w-full h-full object-contain hover:scale-150"
+                        />
+                      </div>
+                    )}
+                    {project.link && (
+                      <div
+                        onClick={() => window.open(project.link, "_blank")}
+                        className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <img
+                          src={link}
+                          alt="source code"
+                          className="w-full h-full object-contain hover:scale-150"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
 

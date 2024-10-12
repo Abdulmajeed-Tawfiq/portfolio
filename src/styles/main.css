@@ -235,11 +235,6 @@
   gap: 30px;
   justify-content: center;
 
-  /* .project-image { */
-  img {
-    height: 230px !important;
-  }
-
   .ant-image-mask {
     border-radius: 16px;
   }

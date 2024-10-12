@@ -1,4 +1,3 @@
-
 export const projectsData = [
   {
     id: 1,
@@ -8,6 +7,9 @@ export const projectsData = [
     techs: ['nextjs', 'tailwindcss', 'typescript'],
     github: 'https://github.com/Abdulmajeed-Tawfiq/dashboard',
     link: 'https://abdulmajeed-dashboard.vercel.app',
+    isBest: true,
+    mainTech: 'nextjs',
+    category: 'web application'
   },
   {
     id: 2,
@@ -17,6 +19,9 @@ export const projectsData = [
     techs: ['react', 'redux', 'react-router-dom'],
     github: 'https://github.com/Abdulmajeed-Tawfiq/ecommerce',
     link: 'https://ecommercereact2.vercel.app',
+    isBest: true,
+    mainTech: 'React',
+    category: 'e-commerce'
   },
   {
     id: 3,
@@ -26,6 +31,9 @@ export const projectsData = [
     techs: ['html', 'css'],
     github: 'https://github.com/Abdulmajeed-Tawfiq/Kasper-Template',
     link: 'https://abdulmajeed-tawfiq.github.io/Kasper-Template',
+    isBest: false,
+    mainTech: 'CSS',
+    category: 'template'
   },
   {
     id: 4,
@@ -35,6 +43,9 @@ export const projectsData = [
     techs: ['html', 'css'],
     github: 'https://github.com/Abdulmajeed-Tawfiq/Leon-Template',
     link: 'https://abdulmajeed-tawfiq.github.io/Leon-Template',
+    isBest: false,
+    mainTech: 'CSS',
+    category: 'template'
   },
   {
     id: 5,
@@ -44,5 +55,8 @@ export const projectsData = [
     techs: ['react', 'html2canvas'],
     github: 'https://github.com/Abdulmajeed-Tawfiq/meme-generator',
     link: 'https://abdulmajeed-tawfiq.github.io/meme-generator',
+    isBest: false,
+    mainTech: 'React',
+    category: 'web application'
   },
 ];
