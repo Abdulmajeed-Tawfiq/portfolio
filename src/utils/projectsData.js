@@ -59,4 +59,15 @@ export const projectsData = [
     mainTech: 'React',
     category: 'web application'
   },
+  {
+    id: 4,
+    name: "SDN",
+    image: ["/images/portfolioImages/sdnWebsite/1.png", "/images/portfolioImages/sdnWebsite/2.png", "/images/portfolioImages/sdnWebsite/3.png", "/images/portfolioImages/sdnWebsite/4.png"],
+    description: "SDNone is a leading digital marketing agency that specializes in providing innovative and result-driven solutions to help businesses thrive in the digital landscape.",
+    techs: ['JavaScript', 'React', 'Tailwind CSS'],
+    link: 'https://www.sdnone.net',
+    isBest: true,
+    mainTech: 'React',
+    category: 'web application'
+  },
 ];

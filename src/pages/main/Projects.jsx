@@ -64,14 +64,14 @@ export default function Projects() {
           >
             <Tilt
               options={{
-                max: 45,
+                max: 20,
                 scale: 1,
                 speed: 1000,
               }}
               className="xs:w-[250px] bg-[#1c1f2f] rounded-2xl min-h-[500px]"
             >
-              <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-                <div className="relative w-full">
+              <div className="w-full h-[230px] green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                <div className="relative w-full h-full">
                   <Image.PreviewGroup
                     preview={{
                       toolbarRender: () => null,

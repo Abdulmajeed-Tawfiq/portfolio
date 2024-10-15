@@ -238,6 +238,9 @@
   .ant-image-mask {
     border-radius: 16px;
   }
+  .ant-image {
+    width: 100%;
+  }
 
   /* } */
 }
