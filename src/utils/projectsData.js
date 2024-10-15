@@ -60,13 +60,23 @@ export const projectsData = [
     category: 'web application'
   },
   {
-    id: 4,
+    id: 6,
     name: "SDN",
     image: ["/images/portfolioImages/sdnWebsite/1.png", "/images/portfolioImages/sdnWebsite/2.png", "/images/portfolioImages/sdnWebsite/3.png", "/images/portfolioImages/sdnWebsite/4.png"],
     description: "SDNone is a leading digital marketing agency that specializes in providing innovative and result-driven solutions to help businesses thrive in the digital landscape.",
     techs: ['JavaScript', 'React', 'Tailwind CSS'],
     link: 'https://www.sdnone.net',
     isBest: true,
+    mainTech: 'React',
+    category: 'web application'
+  },
+  {
+    id: 7,
+    name: "Electronic laboratory",
+    image: ["/images/portfolioImages/laboratory/1.png", "/images/portfolioImages/laboratory/2.png", "/images/portfolioImages/laboratory/3.png", "/images/portfolioImages/laboratory/4.png", "/images/portfolioImages/laboratory/5.png"],
+    description: "A website to helping laboratory technicians to obtain a blood test for the patient as quickly as possible and at the lowest cost.",
+    techs: ['React', 'react-dropzone', 'recoil'],
+    isBest: false,
     mainTech: 'React',
     category: 'web application'
   },
