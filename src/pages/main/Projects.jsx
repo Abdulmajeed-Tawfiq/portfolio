@@ -74,18 +74,54 @@ export default function Projects() {
                 <div className="relative w-full h-full">
                   <Image.PreviewGroup
                     preview={{
-                      toolbarRender: () => null,
-                      countRender: () => null,
+                      toolbarRender: () => {
+                        return (
+                          <div className="flex gap-4">
+                            {project.github && (
+                              <button
+                                onClick={() =>
+                                  window.open(project.github, "_blank")
+                                }
+                                className="bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all"
+                                title="View GitHub Repository"
+                              >
+                                <img
+                                  src={github}
+                                  alt="GitHub"
+                                  className="w-5 h-5"
+                                />
+                                GitHub
+                              </button>
+                            )}
+                            {project.link && (
+                              <button
+                                onClick={() =>
+                                  window.open(project.link, "_blank")
+                                }
+                                className="bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all"
+                                title="View Live Demo"
+                              >
+                                <img
+                                  src={link}
+                                  alt="Live Demo"
+                                  className="w-5 h-5"
+                                />
+                                Live Demo
+                              </button>
+                            )}
+                          </div>
+                        );
+                      },
                     }}
                   >
-                    {project.image.map((img, index) => (
+                    {project.image.map((img, imgIndex) => (
                       <Image
-                        key={index}
+                        key={imgIndex}
                         src={img}
-                        alt={`project-image-${index + 1}`}
+                        alt={`${project.name}-image-${imgIndex + 1}`}
                         className="w-full object-cover rounded-2xl"
                         style={{
-                          display: index === 0 ? "block" : "none",
+                          display: imgIndex === 0 ? "block" : "none",
                           height: 230,
                         }}
                       />
@@ -124,7 +160,7 @@ export default function Projects() {
                   <p className="text-gray-400 px-5">
                     {project.description.split("(screenshot):")[0]}
                   </p>
-                  <div className="flex absolute bottom-6 left-6 gap-3 ">
+                  <div className="flex absolute bottom-6 left-4 gap-3 ">
                     {project.techs.map((tag, index) => (
                       <p key={index} className={`text-[14px] text-[#00c5c3]`}>
                         #{tag}
