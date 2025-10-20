@@ -17,30 +17,27 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_pw2vwn6",
+        "service_o2oly94",
         "template_ciqekcf",
         form.current,
         "sOABhQNatpNqJDc_Y"
       )
-      // .then(
-      //   (result) => {
-          // console.log(result.text);
-      //   },
-      //   (error) => {
-          // console.log(error.text);
-      //   }
-      // );
-    toast.success("Thanks for your message", {
-      position: "top-center",
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      // transition: Bounce,
-    });
+      .then(() => {
+        toast.success("Thanks for your message", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          // transition: Bounce,
+        });
+      })
+      .catch((err) => {
+        toast.error(err);
+      });
   };
 
   return (
